@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Crystals Collector Game</title>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css"> 
+    </head>
+
+    <body>
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h1><class="panel-title">Crystals Collector!"</h1>
+            </div>
+        </div>
+
+        <div class="panel-body">
+            <p>You will be given a random number at the start of the game. There are 4 crystals. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
+                    
+            <p>You win the game by matching your total score to the random number . . . you lose the game if your total score is greater than the random number. The value of each crystal is hidden until you click on it. Each time the game starts anew, the value of the crystals will change.</p>
+        </div>
+          
+        <div class="container-fluid">
+            
+            <div class="row">
+                <div id="stones">
+
+                    <div class="col-lg-3">
+                        <img src="assets/images/blue.png" alt="blue crystal" class="Crystal-value" attr="blue">
+                    </div>        
+
+                    <div class="col-lg-3">
+                        <img src="assets/images/yellow.png" alt="yellow crystal" class="Crystal-value" attr="yellow">
+                    </div>
+                                    
+                    <div class="col-lg-3">
+                        <img src="assets/images/red.png" alt="red crystal" class="Crystal-value" attr="red">
+                    </div>
+                                    
+                    <div class="col-lg-3">                                            
+                        <img src="assets/images/green.png" alt="green crystal" class="Crystal-value" attr="green">
+                    </div>
+
+                </div>
+                            
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <section class="score-section">  
+                        <div id="target">
+                            Target Number:  <span id="target-number"></span>
+                        </div>
+                    </section>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <section class="score-section">
+                        <div id="score">
+                            Your Total Score:  <span id="total-score"></span>
+                        </div>
+                    </section>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <section class="score-section">  
+                        <div id="wins">                                
+                            Wins:  <span id="user-wins"></span>
+                        </div>
+                    </section>
+
+                </div>
+
+                <div class="col-lg-6">
+
+                    <section class="score-section">
+                        <div id="losses">
+                            Losses:  <span id="user-losses"></span>
+                        </div>
+                    </section>
+
+                </div>
+            </div>
+            
+        </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+
+    </body>
+</html>
