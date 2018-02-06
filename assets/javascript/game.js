@@ -37,16 +37,16 @@ function target() {
     randomTargetNumber = targetNumber[Math.floor(Math.random() * targetNumber.length)];
 
 //Write target number to browswer
-    document.getElementById("target-number").innerHTML = randomTargetNumber;
+    $("#target-number").text(randomTargetNumber);
 }
 
 //Call target function
 target();
 
-//
-$(".Crystal-value").on("click", function () {
+//Check to see which crystal the user chose and add that crystal's value to the user's total score
+$(".crystal-value").on("click", function () {
     var color = ($(this).attr("attr"));
-
+    
     if (color === "blue") {
         totalScore += blue
     } else if (color === "yellow") {
@@ -58,14 +58,14 @@ $(".Crystal-value").on("click", function () {
     }
 
 //Write user score to browswer
-    document.getElementById("total-score").innerHTML = totalScore;
+    $("#total-score").text(totalScore);
 
  //If user loses game  - add 1 to games lost, change score to 0, update browswer, call function to initialize  
     if (totalScore > randomTargetNumber) {
         losses++;
         totalScore = 0;
-        document.getElementById("user-losses").innerHTML = losses;
-        document.getElementById("total-score").innerHTML = totalScore;
+        $("#user-losses").text(losses);
+        $("#total-score").text(totalScore);
 
         target();
 
@@ -73,8 +73,8 @@ $(".Crystal-value").on("click", function () {
     } else if (totalScore === randomTargetNumber) {
         wins++;
         totalScore = 0;
-        document.getElementById("user-wins").innerHTML = wins;
-        document.getElementById("total-score").innerHTML = totalScore;
+        $("#user-wins").text(wins);
+        $("#total-score").text(totalScore);
 
         target();
     }
